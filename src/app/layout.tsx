@@ -10,8 +10,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Mayabytes starter template",
-  description: "this is a starter template for mayabytes",
+  title: "exceed starter template",
+  description: "this is a starter template for exceed",
 }
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={cn(inter.className, "min-h-screen")}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
