@@ -74,6 +74,7 @@ const config = {
       },
       backgroundImage: {
         vector: "url(/assets/images/vector.png)",
+        partner: "url(/assets/images/partner.png)",
       },
     },
   },
