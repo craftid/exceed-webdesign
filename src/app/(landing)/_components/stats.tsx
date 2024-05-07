@@ -21,8 +21,8 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="w-full pb-24 pt-24">
-      <div className="bg-vector container mx-auto overflow-hidden rounded-[50px] bg-gray-900 bg-contain bg-center bg-no-repeat px-40 py-24 text-center">
+    <section className="w-full py-20">
+      <div className="container mx-auto overflow-hidden rounded-[50px] bg-gray-900 bg-vector bg-contain bg-center bg-no-repeat px-40 py-24 text-center">
         <h2 className="mb-20 text-6xl font-black uppercase text-white">
           We Take Pride in Our Numbers
         </h2>

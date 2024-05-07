@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Reshaping() {
   return (
-    <section className="relative w-full pb-24 pt-24">
+    <section className="relative w-full py-20">
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="w-[70%]">

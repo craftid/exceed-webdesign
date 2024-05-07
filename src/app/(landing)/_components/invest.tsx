@@ -25,7 +25,7 @@ const invest = [
 
 export default function Invest() {
   return (
-    <section className="w-full pt-24">
+    <section className="w-full py-20">
       <div className="container mx-auto">
         <h2 className="mb-5 text-center text-6xl font-black uppercase text-gray-900">
           Invest with Passion in Talent You Believe in

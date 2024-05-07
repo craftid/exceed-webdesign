@@ -2,7 +2,7 @@ import React from "react"
 
 export default function HomeBanner() {
   return (
-    <section className="w-full">
+    <section className="w-full py-20">
       <h1 className="text-right text-[350px] font-black uppercase leading-[100%] tracking-[25.68px] text-violet-500">
         EXCEED
       </h1>

@@ -73,4 +73,16 @@
   body {
     @apply bg-background bg-gray-200 text-foreground;
   }
+
+  .text-shadow-custom {
+    text-shadow:
+      2px 0 #120924,
+      -2px 0 #120924,
+      0 2px #120924,
+      0 -2px #120924,
+      1px 1px #120924,
+      -1px -1px #120924,
+      1px -1px #120924,
+      -1px 1px #120924;
+  }
 }

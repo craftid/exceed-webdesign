@@ -1,10 +1,9 @@
 import React from "react"
 import Link from "next/link"
-import { DivideCircle } from "lucide-react"
 
 export default function WantToPartner() {
   return (
-    <section className="w-full py-24">
+    <section className="w-full py-20">
       <div className="ml-auto w-11/12">
         <div className="relative z-10 flex items-center justify-between">
           <div className="w-2/5">
@@ -30,7 +29,7 @@ export default function WantToPartner() {
       </div>
       <img
         src="assets/images/bottom.png"
-        className="mt-[-300px] h-auto w-full"
+        className="mt-[-250px] h-auto w-full"
       />
     </section>
   )

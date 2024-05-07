@@ -1,5 +1,8 @@
 import HomeBanner from "./_components/banner"
+import Footer from "./_components/footer"
 import Invest from "./_components/invest"
+import Newsletter from "./_components/newsletter"
+import Nfts from "./_components/nfts"
 import Partners from "./_components/partners"
 import Reshaping from "./_components/reshaping"
 import Stats from "./_components/stats"
@@ -14,6 +17,9 @@ export default function Home() {
       <Stats />
       <Partners />
       <WantToPartner />
+      <Nfts />
+      <Newsletter />
+      <Footer />
     </>
   )
 }
