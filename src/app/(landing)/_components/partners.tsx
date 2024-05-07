@@ -9,12 +9,14 @@ export default function Partners() {
     <section className="w-full py-20">
       <div className="container mx-auto">
         <div className="flex items-center justify-center text-center">
-          <h2 className="text-6xl font-black uppercase text-gray-900">our</h2>
+          <h2 className="text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
+            our
+          </h2>
           <img
             src="/assets/images/brm.png"
-            className="relative mx-5 h-auto w-96"
+            className="relative mx-5 h-auto w-80 2xl:w-96"
           />
-          <h2 className="text-6xl font-black uppercase text-gray-900">
+          <h2 className="text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
             partners
           </h2>
         </div>

@@ -7,10 +7,10 @@ export default function Reshaping() {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="w-[70%]">
-            <h2 className="mb-5 text-6xl font-black uppercase text-gray-900">
+            <h2 className="mb-5 text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
               Reshaping the Dynamics Between Creators and Their True Fans
             </h2>
-            <p className="mb-5 w-3/5 text-base tracking-[-0.32px] text-neutral-600">
+            <p className="mb-5 w-4/5 text-base tracking-[-0.32px] text-neutral-600 2xl:w-3/5">
               Exceed combines fandom with real financial investment. Fans invest
               in their favorite Talent, become part of an exclusive community of
               investors and gain access to unique benefits, along with real
@@ -34,7 +34,7 @@ export default function Reshaping() {
       </div>
       <img
         src="/assets/images/pattern.webp"
-        className="absolute bottom-0 right-0 -z-10 h-[700px] w-auto object-contain"
+        className="absolute bottom-0 right-0 -z-10 h-[400px] w-auto object-contain 2xl:h-[700px]"
       />
     </section>
   )

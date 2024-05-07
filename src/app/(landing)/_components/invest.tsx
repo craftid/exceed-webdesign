@@ -27,10 +27,10 @@ export default function Invest() {
   return (
     <section className="w-full py-20">
       <div className="container mx-auto">
-        <h2 className="mb-5 text-center text-6xl font-black uppercase text-gray-900">
+        <h2 className="mb-5 text-center text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
           Invest with Passion in Talent You Believe in
         </h2>
-        <p className="mx-auto mb-5 w-1/2 text-center text-base tracking-[-0.32px] text-neutral-600">
+        <p className="mx-auto mb-5 w-4/5 text-center text-base tracking-[-0.32px] text-neutral-600 2xl:w-1/2">
           Invest in something you're truly passionate about and believe in.
           Whether it's your favorite musician, a soccer player you admire, or a
           creator soon to make it big - Exceed lets you discover, invest, and
@@ -59,7 +59,7 @@ export default function Invest() {
               />
             </div>
           </div>
-          <div className="w-3/5">
+          <div className="w-3/4 2xl:w-3/5">
             {invest.map((data, index) => (
               <div
                 key={index}
