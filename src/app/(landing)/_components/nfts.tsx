@@ -16,9 +16,9 @@ const artists = [
 
 export default function Nfts() {
   return (
-    <section className="relative w-full py-20">
+    <section className="relative w-full py-10 lg:py-20">
       <div className="container mx-auto">
-        <h2 className="mb-20 text-center text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
+        <h2 className="mb-20 text-center text-[22px] font-black uppercase text-gray-900 md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
           NFTs for Artists Launching Soon
         </h2>
         <div className="relative mx-auto flex w-3/4 justify-center">
@@ -32,7 +32,7 @@ export default function Nfts() {
           {artists.map((data, index) => (
             <div
               key={index}
-              className="relative z-20 h-96 w-80 overflow-hidden rounded-3xl first-of-type:-mr-10 first-of-type:mt-12 first-of-type:-rotate-[20deg] last-of-type:z-10 last-of-type:-ml-10 last-of-type:mt-12 last-of-type:rotate-[20deg]"
+              className="relative z-20 h-60 w-80 overflow-hidden rounded-3xl first-of-type:-mr-10 first-of-type:mt-12 first-of-type:-rotate-[20deg] last-of-type:z-10 last-of-type:-ml-10 last-of-type:mt-12 last-of-type:rotate-[20deg] lg:h-96"
             >
               <Image
                 width={389}

@@ -21,21 +21,21 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="w-full py-20">
-      <div className="container mx-auto overflow-hidden rounded-[50px] bg-gray-900 bg-vector bg-cover bg-center bg-no-repeat py-24 text-center 2xl:px-40">
-        <h2 className="mb-20 text-5xl font-black uppercase text-white 2xl:text-6xl">
+    <section className="w-full py-10 lg:py-20">
+      <div className="container mx-auto overflow-hidden rounded-[50px] bg-gray-900 bg-vector bg-cover bg-center bg-no-repeat px-10 py-20 text-center lg:px-40 lg:py-24">
+        <h2 className="mb-10 text-[22px] font-black uppercase text-white md:text-3xl lg:mb-20 lg:text-4xl xl:text-5xl 2xl:text-6xl">
           We Take Pride in Our Numbers
         </h2>
         <div className="flex items-center justify-between text-center text-white">
           {stats.map((data, index) => (
             <div
               key={index}
-              className="w-3/12 border-r border-white p-4 last-of-type:border-r-0 2xl:p-5"
+              className="w-3/12 border-r border-white p-2 last-of-type:border-r-0 md:p-3 xl:p-4 2xl:p-5"
             >
-              <h3 className="mb-5 text-5xl font-black uppercase 2xl:text-6xl">
+              <h3 className="mb-5 text-[22px] font-black uppercase md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
                 {data.number}
               </h3>
-              <p className="mx-auto w-4/5 text-base font-normal capitalize tracking-tighter">
+              <p className="mx-auto w-full text-base font-normal capitalize tracking-tighter lg:w-4/5">
                 {data.desc}
               </p>
             </div>
