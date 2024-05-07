@@ -38,6 +38,9 @@ importers:
       embla-carousel-react:
         specifier: ^8.0.2
         version: 8.0.2(react@18.2.0)
+      framer-motion:
+        specifier: 11.0.10
+        version: 11.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       lucide-react:
         specifier: ^0.370.0
         version: 0.370.0(react@18.2.0)
@@ -210,6 +213,12 @@ packages:
 
   '@emnapi/runtime@1.1.1':
     resolution: {integrity: sha512-3bfqkzuR1KLx57nZfjr2NLnFOobvyS0aTszaEGCGqmYMVDRaGvgIZbjGSV/MHSSmLgQ/b9JFHQ5xm5WRZYd+XQ==}
+
+  '@emotion/is-prop-valid@0.8.8':
+    resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
+
+  '@emotion/memoize@0.7.4':
+    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
 
   '@eslint-community/eslint-utils@4.4.0':
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -1362,6 +1371,17 @@ packages:
   foreground-child@3.1.1:
     resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==}
     engines: {node: '>=14'}
+
+  framer-motion@11.0.10:
+    resolution: {integrity: sha512-aaImib9FQlfno2yiZAdkvN6zLXLr8a9uGsGFlQO64hSm8NoCeiUng2//5ok7RHCW2ufzT74uuPsmWzUsrHPYDQ==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
@@ -2542,6 +2562,14 @@ snapshots:
   '@emnapi/runtime@1.1.1':
     dependencies:
       tslib: 2.6.2
+    optional: true
+
+  '@emotion/is-prop-valid@0.8.8':
+    dependencies:
+      '@emotion/memoize': 0.7.4
+    optional: true
+
+  '@emotion/memoize@0.7.4':
     optional: true
 
   '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0)':
@@ -3836,6 +3864,14 @@ snapshots:
     dependencies:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
+
+  framer-motion@11.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      tslib: 2.6.2
+    optionalDependencies:
+      '@emotion/is-prop-valid': 0.8.8
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   fs.realpath@1.0.0: {}
 
