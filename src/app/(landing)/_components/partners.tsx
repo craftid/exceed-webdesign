@@ -7,10 +7,10 @@ import { PartnerSlider } from "./partners-slider"
 
 export default function Partners() {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-10 lg:py-20">
       <div className="container mx-auto">
         <div className="flex items-center justify-center text-center">
-          <h2 className="text-4xl font-black uppercase text-gray-900 xl:text-5xl 2xl:text-6xl">
+          <h2 className="text-3xl font-black uppercase text-gray-900 lg:text-4xl xl:text-5xl 2xl:text-6xl">
             our
           </h2>
           <Image
@@ -20,7 +20,7 @@ export default function Partners() {
             src="/assets/images/brm.png"
             className="relative mx-5 h-auto w-60 xl:w-80 2xl:w-96"
           />
-          <h2 className="text-4xl font-black uppercase text-gray-900 xl:text-5xl 2xl:text-6xl">
+          <h2 className="text-3xl font-black uppercase text-gray-900 lg:text-4xl xl:text-5xl 2xl:text-6xl">
             partners
           </h2>
         </div>

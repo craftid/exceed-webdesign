@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function WantToPartner() {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-10 lg:py-20">
       <div className="ml-auto w-11/12">
         <div className="relative z-10 flex items-center justify-between">
           <div className="w-2/5">
@@ -17,7 +17,7 @@ export default function WantToPartner() {
             />
           </div>
           <div className="w-3/5">
-            <h2 className="mb-5 w-4/5 text-4xl font-black uppercase text-gray-900 xl:text-5xl 2xl:text-6xl">
+            <h2 className="mb-5 w-4/5 text-3xl font-black uppercase text-gray-900 lg:text-4xl xl:text-5xl 2xl:text-6xl">
               Want to partner with us on this project?
             </h2>
             <p className="mb-5 w-4/5 text-base font-normal capitalize tracking-tighter 2xl:w-3/5">
