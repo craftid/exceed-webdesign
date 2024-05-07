@@ -19,7 +19,7 @@ export function PartnerSlider() {
       <CarouselContent>
         {Array.from({ length: 10 }).map((_, index) => (
           <CarouselItem key={index} className="basis-full">
-            <h2 className="text-shadow-custom bg-transparent text-center text-4xl font-black uppercase text-gray-200 2xl:text-[58px]">
+            <h2 className="text-shadow-custom bg-transparent text-center text-3xl font-black uppercase text-gray-200 xl:text-4xl 2xl:text-[58px]">
               Are You a Musician, Creator, or a Professional Athlete?
             </h2>
           </CarouselItem>

@@ -23,16 +23,16 @@ export default function Stats() {
   return (
     <section className="w-full py-20">
       <div className="container mx-auto overflow-hidden rounded-[50px] bg-gray-900 bg-vector bg-cover bg-center bg-no-repeat py-24 text-center 2xl:px-40">
-        <h2 className="mb-20 text-5xl font-black uppercase text-white 2xl:text-6xl">
+        <h2 className="mb-20 text-4xl font-black uppercase text-white xl:text-5xl 2xl:text-6xl">
           We Take Pride in Our Numbers
         </h2>
         <div className="flex items-center justify-between text-center text-white">
           {stats.map((data, index) => (
             <div
               key={index}
-              className="w-3/12 border-r border-white p-4 last-of-type:border-r-0 2xl:p-5"
+              className="w-3/12 border-r border-white p-3 last-of-type:border-r-0 xl:p-4 2xl:p-5"
             >
-              <h3 className="mb-5 text-5xl font-black uppercase 2xl:text-6xl">
+              <h3 className="mb-5 text-4xl font-black uppercase xl:text-5xl 2xl:text-6xl">
                 {data.number}
               </h3>
               <p className="mx-auto w-4/5 text-base font-normal capitalize tracking-tighter">

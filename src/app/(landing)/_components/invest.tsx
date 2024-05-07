@@ -28,7 +28,7 @@ export default function Invest() {
   return (
     <section className="w-full py-20">
       <div className="container mx-auto">
-        <h2 className="mb-5 text-center text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
+        <h2 className="mb-5 text-center text-4xl font-black uppercase text-gray-900 xl:text-5xl 2xl:text-6xl">
           Invest with Passion in Talent You Believe in
         </h2>
         <p className="mx-auto mb-5 w-4/5 text-center text-base tracking-[-0.32px] text-neutral-600 2xl:w-1/2">

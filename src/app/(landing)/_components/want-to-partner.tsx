@@ -17,7 +17,7 @@ export default function WantToPartner() {
             />
           </div>
           <div className="w-3/5">
-            <h2 className="mb-5 w-4/5 text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
+            <h2 className="mb-5 w-4/5 text-4xl font-black uppercase text-gray-900 xl:text-5xl 2xl:text-6xl">
               Want to partner with us on this project?
             </h2>
             <p className="mb-5 w-4/5 text-base font-normal capitalize tracking-tighter 2xl:w-3/5">

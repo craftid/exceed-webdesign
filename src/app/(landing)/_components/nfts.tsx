@@ -18,7 +18,7 @@ export default function Nfts() {
   return (
     <section className="relative w-full py-20">
       <div className="container mx-auto">
-        <h2 className="mb-20 text-center text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
+        <h2 className="mb-20 text-center text-4xl font-black uppercase text-gray-900 xl:text-5xl 2xl:text-6xl">
           NFTs for Artists Launching Soon
         </h2>
         <div className="relative mx-auto flex w-3/4 justify-center">
