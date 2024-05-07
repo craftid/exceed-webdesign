@@ -28,7 +28,7 @@ export default function Invest() {
   return (
     <section className="w-full py-10 lg:py-20">
       <div className="container mx-auto">
-        <h2 className="mb-5 text-center text-3xl font-black uppercase text-gray-900 lg:text-4xl xl:text-5xl 2xl:text-6xl">
+        <h2 className="mb-5 text-center text-[22px] font-black uppercase text-gray-900 md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
           Invest with Passion in Talent You Believe in
         </h2>
         <p className="mx-auto mb-10 w-full text-center text-base tracking-[-0.32px] text-neutral-600 lg:mb-5 lg:w-4/5 2xl:w-1/2">
@@ -37,8 +37,8 @@ export default function Invest() {
           or a creator soon to make it big - Exceed lets you discover, invest,
           and engage with your favorite Talent.
         </p>
-        <div className="ms:flex-nowrap flex flex-wrap items-center justify-between">
-          <div className="w-3/12">
+        <div className="flex flex-wrap items-center justify-between md:flex-nowrap">
+          <div className="w-full md:w-3/12">
             <div className="relative before:absolute before:-left-10 before:top-20 before:z-10 before:h-24 before:w-24 before:bg-zinc-300 before:content-['']">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,11 +59,11 @@ export default function Invest() {
                 height={813}
                 alt=""
                 src="/assets/images/phone.png"
-                className="relative mr-5 h-auto w-80 "
+                className="relative mx-auto h-auto w-60 md:mr-5 md:w-80 "
               />
             </div>
           </div>
-          <div className="w-3/4 2xl:w-3/5">
+          <div className="w-full md:w-3/4 2xl:w-3/5">
             {invest.map((data, index) => (
               <div
                 key={index}

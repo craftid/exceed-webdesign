@@ -8,7 +8,7 @@ export default function Reshaping() {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="w-[70%]">
-            <h2 className="mb-5 text-3xl font-black uppercase text-gray-900 lg:text-4xl xl:text-5xl 2xl:text-6xl">
+            <h2 className="mb-5 text-[22px] font-black uppercase text-gray-900 md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
               Reshaping the Dynamics Between Creators and Their True Fans
             </h2>
             <p className="mb-5 w-4/5 text-base tracking-[-0.32px] text-neutral-600 2xl:w-3/5">

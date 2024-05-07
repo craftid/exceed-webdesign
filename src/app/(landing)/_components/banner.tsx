@@ -5,7 +5,7 @@ export default function HomeBanner() {
   return (
     <section className="w-full py-10 lg:py-20">
       <div className="container mx-auto">
-        <h1 className="text-center text-[140px] font-black uppercase leading-[100%] tracking-[25.68px] text-violet-500 lg:text-[200px] xl:text-[225px] 2xl:text-[300px]">
+        <h1 className="text-center font-black uppercase leading-[100%] tracking-[25.68px] text-violet-500 sm:text-8xl md:text-[140px] lg:text-[200px] xl:text-[225px] 2xl:text-[300px]">
           EXCEED
         </h1>
         <div className="relative z-10 flex w-full flex-wrap items-center justify-between">
