@@ -14,9 +14,6 @@ importers:
       '@motionone/utils':
         specifier: ^10.17.0
         version: 10.17.0
-      '@next/font':
-        specifier: ^14.2.3
-        version: 14.2.3(next@14.2.1(@babel/core@7.24.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.0.6
         version: 2.0.6(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -418,11 +415,6 @@ packages:
 
   '@next/eslint-plugin-next@14.2.1':
     resolution: {integrity: sha512-Fp+mthEBjkn8r9qd6o4JgxKp0IDEzW0VYHD8ZC05xS5/lFNwHKuOdr2kVhWG7BQCO9L6eeepshM1Wbs2T+LgSg==}
-
-  '@next/font@14.2.3':
-    resolution: {integrity: sha512-u35UstQmvl3Yrvv2MOi6RcXMH3xDtmWTXcvkYcC/vCZHLqj/5JQ5UyFRf5saDWxFlZIkEh8HCzwNGoiHIr1/NQ==}
-    peerDependencies:
-      next: '*'
 
   '@next/swc-darwin-arm64@14.2.1':
     resolution: {integrity: sha512-kGjnjcIJehEcd3rT/3NAATJQndAEELk0J9GmGMXHSC75TMnvpOhONcjNHbjtcWE5HUQnIHy5JVkatrnYm1QhVw==}
@@ -2734,10 +2726,6 @@ snapshots:
   '@next/eslint-plugin-next@14.2.1':
     dependencies:
       glob: 10.3.10
-
-  '@next/font@14.2.3(next@14.2.1(@babel/core@7.24.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))':
-    dependencies:
-      next: 14.2.1(@babel/core@7.24.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
   '@next/swc-darwin-arm64@14.2.1':
     optional: true
