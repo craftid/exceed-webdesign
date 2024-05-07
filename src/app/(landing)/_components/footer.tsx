@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Footer() {
@@ -8,13 +9,12 @@ export default function Footer() {
         <div className="flex items-center justify-between border-b border-gray-900 pb-12">
           <div className="basis-1/5">
             <a href="/" className="">
-              <img
+              <Image
                 alt="logo"
                 loading="lazy"
                 width="200"
                 height="60"
-                className="h-auto w-full"
-                src="assets/images/logo.png"
+                src="/assets/images/logo.png"
               />
             </a>
           </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                   className="text-base font-bold uppercase text-gray-900 transition-all hover:text-violet-500"
                   href="#"
                 >
-                  faq's
+                  faq&apos;s
                 </Link>
               </li>
               <li>
@@ -154,7 +154,7 @@ export default function Footer() {
             purchase or subscribe for any investment or security.
           </p>
           <p className="mb-5 text-center text-sm capitalize -tracking-tight text-neutral-600">
-            Offers are made exclusively through Exceed's official offering
+            Offers are made exclusively through Exceed&apos;s official offering
             documents and solely to eligible investors in jurisdictions where
             such offer, distribution, publication, availability or use would be
             permitted under applicable laws. All information in this site is

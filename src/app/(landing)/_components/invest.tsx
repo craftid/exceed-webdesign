@@ -1,8 +1,9 @@
 import React from "react"
+import Image from "next/image"
 
 const invest = [
   {
-    icon: "assets/images/icon-1.png",
+    icon: "/assets/images/icon-1.png",
     title: "Invest in Talent You Believe In",
     desc: "Invest in your favorite musicians, artists, creators and athletes. Help them grow their career.",
   },
@@ -31,10 +32,10 @@ export default function Invest() {
           Invest with Passion in Talent You Believe in
         </h2>
         <p className="mx-auto mb-5 w-4/5 text-center text-base tracking-[-0.32px] text-neutral-600 2xl:w-1/2">
-          Invest in something you're truly passionate about and believe in.
-          Whether it's your favorite musician, a soccer player you admire, or a
-          creator soon to make it big - Exceed lets you discover, invest, and
-          engage with your favorite Talent.{" "}
+          Invest in something you&apos;re truly passionate about and believe in.
+          Whether it&apos;s your favorite musician, a soccer player you admire,
+          or a creator soon to make it big - Exceed lets you discover, invest,
+          and engage with your favorite Talent.
         </p>
         <div className="flex items-center justify-between">
           <div className="w-3/12">
@@ -53,7 +54,10 @@ export default function Invest() {
                   className="fill-stone-300"
                 />
               </svg>
-              <img
+              <Image
+                width={326}
+                height={813}
+                alt=""
                 src="/assets/images/phone.png"
                 className="relative mr-5 h-auto w-80 "
               />
@@ -66,7 +70,13 @@ export default function Invest() {
                 className="mb-5 flex items-center border-b-2 border-neutral-400 pb-5"
               >
                 <div className="w-1/5">
-                  <img src={data.icon} className="h-auto w-24" />
+                  <Image
+                    width={98}
+                    height={83}
+                    alt=""
+                    src={data.icon}
+                    className="h-auto w-24"
+                  />
                 </div>
                 <div className="w-2/5">
                   <h4 className="w-4/5 text-2xl font-bold uppercase text-gray-900">

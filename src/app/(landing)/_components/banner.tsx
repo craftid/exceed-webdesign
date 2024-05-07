@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 
 export default function HomeBanner() {
   return (
@@ -17,25 +18,37 @@ export default function HomeBanner() {
               Talent
             </p>
             <div className="mt-5 flex">
-              <img
+              <Image
+                width={166}
+                height={50}
+                alt=""
                 src="/assets/images/app-store.png"
-                className="relative mr-5 h-auto w-40"
+                className="relative mr-5"
               />
-              <img
+              <Image
+                width={166}
+                height={50}
+                alt=""
                 src="/assets/images/google-play.png"
-                className="relative h-auto w-40"
+                className="relative"
               />
             </div>
           </div>
           <div className="w-1/2 2xl:w-1/2">
-            <img
+            <Image
+              width={970}
+              height={714}
+              alt=""
               src="/assets/images/banner-img.png"
               className="relative mt-[-150px] h-auto w-full 2xl:ml-5 2xl:mt-[-180px]"
             />
           </div>
         </div>
       </div>
-      <img
+      <Image
+        width={1920}
+        height={620}
+        alt=""
         src="/assets/images/banner.png"
         className="h-auto w-full object-cover xl:mt-[-300px] 2xl:mt-[-500px]"
       />

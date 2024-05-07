@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 
 import { Carousel } from "@/components/ui/carousel"
 
@@ -12,7 +13,10 @@ export default function Partners() {
           <h2 className="text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
             our
           </h2>
-          <img
+          <Image
+            width={448}
+            height={448}
+            alt=""
             src="/assets/images/brm.png"
             className="relative mx-5 h-auto w-80 2xl:w-96"
           />
@@ -21,7 +25,10 @@ export default function Partners() {
           </h2>
         </div>
       </div>
-      <img
+      <Image
+        width={1532}
+        height={1023}
+        alt=""
         src="/assets/images/partner.png"
         className="relative -mt-36 h-[300px] w-auto object-contain"
       />
