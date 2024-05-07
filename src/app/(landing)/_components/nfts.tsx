@@ -1,15 +1,16 @@
 import React from "react"
+import Image from "next/image"
 import Link from "next/link"
 
 const artists = [
   {
-    image: "assets/images/artist-1.png",
+    image: "/assets/images/artist-1.png",
   },
   {
-    image: "assets/images/artist-1.png",
+    image: "/assets/images/artist-1.png",
   },
   {
-    image: "assets/images/artist-1.png",
+    image: "/assets/images/artist-1.png",
   },
 ]
 
@@ -17,12 +18,15 @@ export default function Nfts() {
   return (
     <section className="relative w-full py-20">
       <div className="container mx-auto">
-        <h2 className="mb-20 text-center text-6xl font-black uppercase text-gray-900">
+        <h2 className="mb-20 text-center text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
           NFTs for Artists Launching Soon
         </h2>
         <div className="relative mx-auto flex w-3/4 justify-center">
-          <img
-            src="assets/images/frame.png"
+          <Image
+            width={19}
+            height={20}
+            alt=""
+            src="/assets/images/frame.png"
             className="absolute -top-10 right-72 h-auto w-auto"
           />
           {artists.map((data, index) => (
@@ -30,7 +34,10 @@ export default function Nfts() {
               key={index}
               className="relative z-20 h-96 w-80 overflow-hidden rounded-3xl first-of-type:-mr-10 first-of-type:mt-12 first-of-type:-rotate-[20deg] last-of-type:z-10 last-of-type:-ml-10 last-of-type:mt-12 last-of-type:rotate-[20deg]"
             >
-              <img
+              <Image
+                width={389}
+                height={455}
+                alt=""
                 src={data.image}
                 className="z-10 h-full w-full object-cover"
               />
@@ -51,8 +58,11 @@ export default function Nfts() {
               </div>
             </div>
           ))}
-          <img
-            src="assets/images/and.png"
+          <Image
+            width={31}
+            height={59}
+            alt=""
+            src="/assets/images/and.png"
             className="absolute bottom-0 left-0 h-auto w-auto"
           />
         </div>
@@ -64,8 +74,11 @@ export default function Nfts() {
         </Link>
       </div>
 
-      <img
-        src="assets/images/pattern-2.png"
+      <Image
+        width={1920}
+        height={590}
+        alt=""
+        src="/assets/images/pattern-2.png"
         className="-mt-12 h-80 w-full object-cover"
       />
     </section>

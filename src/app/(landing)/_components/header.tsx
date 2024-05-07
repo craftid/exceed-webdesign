@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Header({
@@ -8,13 +9,12 @@ export default function Header({
       <div className="flex items-center justify-between">
         <div className="w-fit">
           <Link href="/">
-            <img
+            <Image
               alt="logo"
               loading="lazy"
               width="200"
               height="60"
-              className="h-auto w-auto"
-              src="assets/images/logo.png"
+              src="/assets/images/logo.png"
             />
           </Link>
         </div>
@@ -41,7 +41,7 @@ export default function Header({
                 className="text-base font-bold uppercase text-gray-900 transition-all hover:text-violet-500"
                 href="#"
               >
-                faq's
+                faq&apos;s
               </Link>
             </li>
             <li>

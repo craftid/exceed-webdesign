@@ -22,17 +22,17 @@ const stats = [
 export default function Stats() {
   return (
     <section className="w-full py-20">
-      <div className="container mx-auto overflow-hidden rounded-[50px] bg-gray-900 bg-vector bg-contain bg-center bg-no-repeat px-40 py-24 text-center">
-        <h2 className="mb-20 text-6xl font-black uppercase text-white">
+      <div className="container mx-auto overflow-hidden rounded-[50px] bg-gray-900 bg-vector bg-cover bg-center bg-no-repeat py-24 text-center 2xl:px-40">
+        <h2 className="mb-20 text-5xl font-black uppercase text-white 2xl:text-6xl">
           We Take Pride in Our Numbers
         </h2>
         <div className="flex items-center justify-between text-center text-white">
           {stats.map((data, index) => (
             <div
               key={index}
-              className="w-3/12 border-r border-white p-5 last-of-type:border-r-0"
+              className="w-3/12 border-r border-white p-4 last-of-type:border-r-0 2xl:p-5"
             >
-              <h3 className="mb-5 text-6xl font-black uppercase">
+              <h3 className="mb-5 text-5xl font-black uppercase 2xl:text-6xl">
                 {data.number}
               </h3>
               <p className="mx-auto w-4/5 text-base font-normal capitalize tracking-tighter">

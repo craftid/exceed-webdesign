@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Reshaping() {
@@ -7,10 +8,10 @@ export default function Reshaping() {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="w-[70%]">
-            <h2 className="mb-5 text-6xl font-black uppercase text-gray-900">
+            <h2 className="mb-5 text-5xl font-black uppercase text-gray-900 2xl:text-6xl">
               Reshaping the Dynamics Between Creators and Their True Fans
             </h2>
-            <p className="mb-5 w-3/5 text-base tracking-[-0.32px] text-neutral-600">
+            <p className="mb-5 w-4/5 text-base tracking-[-0.32px] text-neutral-600 2xl:w-3/5">
               Exceed combines fandom with real financial investment. Fans invest
               in their favorite Talent, become part of an exclusive community of
               investors and gain access to unique benefits, along with real
@@ -24,17 +25,29 @@ export default function Reshaping() {
             </Link>
           </div>
           <div className="relative w-[30%]">
-            <img src="/assets/images/reshape.webp" className="h-auto w-full" />
-            <img
+            <Image
+              width={481}
+              height={728}
+              alt=""
+              src="/assets/images/reshape.webp"
+              className="h-auto w-full"
+            />
+            <Image
+              width={31}
+              height={59}
+              alt=""
               src="/assets/images/and.png"
               className="absolute -right-10 -top-10 h-14 w-7"
             />
           </div>
         </div>
       </div>
-      <img
+      <Image
+        width={1146}
+        height={749}
+        alt=""
         src="/assets/images/pattern.webp"
-        className="absolute bottom-0 right-0 -z-10 h-[700px] w-auto object-contain"
+        className="absolute bottom-0 right-0 -z-10 h-[400px] w-auto object-contain 2xl:h-[700px]"
       />
     </section>
   )

@@ -13,9 +13,6 @@ const config = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
     },
     extend: {
       colors: {
@@ -75,6 +72,22 @@ const config = {
       backgroundImage: {
         vector: "url(/assets/images/vector.png)",
         partner: "url(/assets/images/partner.png)",
+      },
+      screens: {
+        sm: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1120px",
+        // => @media (min-width: 1200px) { ... }
+
+        "2xl": "1620px",
+        // => @media (min-width: 1620px) { ... }
       },
     },
   },
