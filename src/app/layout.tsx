@@ -10,8 +10,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "exceed starter template",
-  description: "this is a starter template for exceed",
+  title: "Exceed landing page",
+  description: "using Next.js, tailwindcss, framer-motion, and more",
 }
 
 export default function RootLayout({

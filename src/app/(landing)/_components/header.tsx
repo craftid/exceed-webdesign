@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { cn } from "@/lib/utils"
+
 export default function Header({
   children,
 }: Readonly<{ children?: React.ReactNode }>) {
@@ -55,7 +57,12 @@ export default function Header({
             <li>
               <Link
                 href="#"
-                className="relative block w-fit border-violet-500 bg-violet-500 px-12 py-5 text-base font-bold text-white transition-all after:absolute after:-bottom-1 after:-right-1 after:-z-10 after:h-14 after:w-full after:border after:border-gray-900 after:content-[''] hover:bg-gray-900"
+                className={cn(
+                  "relative block w-fit ",
+                  "border-violet-500 bg-violet-500 px-12 py-5 text-base font-bold text-white transition-all duration-300 hover:bg-gray-900",
+                  "after:absolute after:-z-10 after:h-14 after:w-full after:border after:border-gray-900 after:content-['']",
+                  "after:-bottom-1 after:-right-1 after:transition-all after:duration-300 hover:after:bottom-0 hover:after:right-0"
+                )}
               >
                 Get Started
               </Link>
