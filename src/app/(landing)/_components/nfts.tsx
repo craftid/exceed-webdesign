@@ -18,32 +18,58 @@ const artists = [
 
 export default function Nfts() {
   return (
-    <section className="relative w-full py-10 lg:py-20">
-      <div className="container mx-auto">
-        <h2 className="mb-20 text-center text-[22px] font-black uppercase text-gray-900 md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+    <section className={cn("relative w-full", "py-10 lg:py-20")}>
+      <div className={cn("container mx-auto")}>
+        <h2
+          className={cn(
+            "text-center font-black uppercase text-gray-900",
+            "text-[22px] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl",
+            "mb-20"
+          )}
+        >
           NFTs for Artists Launching Soon
         </h2>
-        <div className="relative mx-auto flex w-3/4 justify-center">
+        <div
+          className={cn(
+            "flex justify-center",
+            "mx-auto",
+            "relative",
+            "flex-wrap sm:flex-nowrap"
+          )}
+        >
           <Image
             width={19}
             height={20}
             alt=""
             src="/assets/images/frame.png"
-            className="absolute -top-10 right-72 h-auto w-auto"
+            className={cn("absolute -top-10 right-72", "h-auto w-auto")}
           />
           {artists.map((data, index) => (
             <div
               key={index}
-              className="relative z-20 h-60 w-80 overflow-hidden rounded-3xl first-of-type:-mr-10 first-of-type:mt-12 first-of-type:-rotate-[20deg] last-of-type:z-10 last-of-type:-ml-10 last-of-type:mt-12 last-of-type:rotate-[20deg] lg:h-96"
+              className={cn(
+                "relative z-20 overflow-hidden rounded-3xl",
+                "first-of-type:mt-12 sm:first-of-type:-mr-10 sm:first-of-type:-rotate-[20deg]",
+                "last-of-type:z-10 sm:last-of-type:-ml-10 sm:last-of-type:mt-12 sm:last-of-type:rotate-[20deg]",
+                "my-5 sm:my-0",
+                "h-auto w-full sm:h-60 sm:w-80 lg:h-96"
+              )}
             >
               <Image
                 width={389}
                 height={455}
                 alt=""
                 src={data.image}
-                className="z-10 h-full w-full object-cover"
+                className={cn("z-10", "object-cover", "h-full w-full")}
               />
-              <div className="absolute bottom-0 left-0 right-0 top-0 flex h-full w-full items-center justify-center backdrop-blur-md transition-all hover:backdrop-blur-0">
+              <div
+                className={cn(
+                  "absolute bottom-0 left-0 right-0 top-0",
+                  "flex items-center justify-center",
+                  "h-full w-full",
+                  "backdrop-blur-md transition-all hover:backdrop-blur-0"
+                )}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="191"
@@ -65,13 +91,18 @@ export default function Nfts() {
             height={59}
             alt=""
             src="/assets/images/and.png"
-            className="absolute bottom-0 left-0 h-auto w-auto"
+            className={cn(
+              "absolute bottom-0 left-0",
+              "h-auto w-auto",
+              "hidden sm:block"
+            )}
           />
         </div>
         <Link
           href="#"
           className={cn(
             "relative mx-auto block w-fit",
+            "mt-5 sm:mt-0",
             "border-violet-500 bg-violet-500 px-12 py-5 text-base font-bold text-white transition-all duration-300 hover:bg-gray-900",
             "after:absolute after:-z-10 after:h-14 after:w-full after:border after:border-gray-900 after:content-['']",
             "after:-bottom-1 after:-right-1 after:transition-all after:duration-300 hover:after:bottom-0 hover:after:right-0"
@@ -86,7 +117,7 @@ export default function Nfts() {
         height={590}
         alt=""
         src="/assets/images/pattern-2.png"
-        className="-mt-12 h-80 w-full object-cover"
+        className={cn("-mt-12 object-cover", "h-80 w-full")}
       />
     </section>
   )

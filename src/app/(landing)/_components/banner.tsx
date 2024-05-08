@@ -11,6 +11,7 @@ export default function HomeBanner() {
         "px-3 pb-20 pt-10 sm:px-0 md:pb-36 md:pt-20",
         "bg-hero bg-contain bg-bottom bg-no-repeat"
       )}
+      id="home"
     >
       <div
         className={cn(
@@ -84,7 +85,7 @@ export default function HomeBanner() {
               One platform to invest, earn, interact, influence, and celebrate
               Talent
             </p>
-            <div className={cn("mt-5", "flex")}>
+            <div className={cn("mt-5", "flex flex-wrap gap-2")}>
               <Image
                 width={166}
                 height={50}

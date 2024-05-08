@@ -1,5 +1,5 @@
+import Footer from "../../components/footer"
 import HomeBanner from "./_components/banner"
-import Footer from "./_components/footer"
 import Invest from "./_components/invest"
 import Newsletter from "./_components/newsletter"
 import Nfts from "./_components/nfts"

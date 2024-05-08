@@ -6,23 +6,50 @@ import { cn } from "@/lib/utils"
 
 export default function WantToPartner() {
   return (
-    <section className="w-full py-10 lg:py-20">
-      <div className="ml-auto w-11/12">
-        <div className="relative z-10 flex items-center justify-between">
-          <div className="w-2/5">
+    <section
+      id="want"
+      className={cn(
+        "w-full",
+        "py-10 lg:py-20",
+        "bg-want bg-contain bg-bottom bg-no-repeat"
+      )}
+    >
+      <div className={cn("container mx-auto")}>
+        <div
+          className={cn(
+            "relative z-10",
+            "flex items-center justify-between",
+            "flex-wrap sm:flex-nowrap"
+          )}
+        >
+          <div className={cn("w-full sm:w-2/5", "mb-5 sm:mb-0")}>
             <Image
               width={811}
               height={787}
               alt=""
               src="/assets/images/want.png"
-              className="h-auto w-full"
+              className={cn("h-auto w-full")}
             />
           </div>
-          <div className="w-3/5">
-            <h2 className="mb-5 w-4/5 text-[22px] font-black uppercase text-gray-900 md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+          <div className={cn("w-full sm:w-3/5")}>
+            <h2
+              className={cn(
+                "font-black uppercase text-gray-900",
+                "mb-5",
+                "w-full lg:w-10/12",
+                "text-[22px] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+              )}
+            >
               Want to partner with us on this project?
             </h2>
-            <p className="mb-5 w-4/5 text-base font-normal capitalize tracking-tighter 2xl:w-3/5">
+            <p
+              className={cn(
+                "font-normal capitalize tracking-tighter",
+                "w-full lg:w-4/5 2xl:w-3/5",
+                "text-base",
+                "mb-5"
+              )}
+            >
               We can help you meet your capital needs for your career, engage
               with your target audience, build a community of supporters, and
               benefit from new income sources. We&apos;d love to hear from you.
@@ -41,13 +68,6 @@ export default function WantToPartner() {
           </div>
         </div>
       </div>
-      <Image
-        width={1920}
-        height={834}
-        alt=""
-        src="/assets/images/bottom.png"
-        className="mt-[-150px] h-auto w-full 2xl:mt-[-250px]"
-      />
     </section>
   )
 }

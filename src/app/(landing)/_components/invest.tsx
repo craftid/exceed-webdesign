@@ -28,7 +28,7 @@ const invest = [
 
 export default function Invest() {
   return (
-    <section className={cn("relative", "py-10 lg:py-20", "w-full")}>
+    <section className={cn("relative", "py-10 lg:py-20", "w-full")} id="invest">
       <div className={cn("container mx-auto")}>
         <div
           className={cn(

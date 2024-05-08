@@ -2,7 +2,7 @@ import React from "react"
 
 import ScrollTo from "@/components/ui/scrollTo"
 
-import Header from "./_components/header"
+import Header from "../../components/header"
 
 const navitems = [
   {

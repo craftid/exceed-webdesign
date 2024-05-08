@@ -79,6 +79,7 @@ const config = {
         title: "url(/assets/images/and.png)",
         music: "url(/assets/images/music.png)",
         hero: "url(/assets/images/hero.png)",
+        want: "url(/assets/images/bottom.png)",
       },
     },
   },

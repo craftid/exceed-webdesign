@@ -2,12 +2,21 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 
+import { cn } from "@/lib/utils"
+
 export default function Footer() {
   return (
-    <section className="w-full">
-      <div className="container mx-auto">
-        <div className="flex items-center justify-between border-b border-gray-900 pb-12">
-          <div className="basis-1/5">
+    <footer className={cn("w-full")}>
+      <div className={cn("container mx-auto")}>
+        <div
+          className={cn(
+            "flex items-center justify-between",
+            "pb-12",
+            "border-b border-gray-900",
+            "flex-wrap md:flex-nowrap"
+          )}
+        >
+          <div className={cn("basis-full md:basis-1/5", "mb-5 md:mb-0")}>
             <a href="/" className="">
               <Image
                 alt="logo"
@@ -15,50 +24,75 @@ export default function Footer() {
                 width="200"
                 height="60"
                 src="/assets/images/logo.png"
+                className="mx-auto md:m-0"
               />
             </a>
           </div>
-          <div className="basis-3/5 text-center">
-            <ul className="inline-flex list-none gap-5">
+          <div
+            className={cn(
+              "basis-full sm:basis-3/5",
+              "text-center",
+              "mb-5 sm:mb-0"
+            )}
+          >
+            <ul className={cn("list-none gap-5", "block sm:inline-flex")}>
               <li>
                 <Link
-                  className="text-base font-bold uppercase text-gray-900 transition-all hover:text-violet-500"
-                  href="#"
+                  className={cn(
+                    "text-base font-bold uppercase transition-all",
+                    "text-gray-900 hover:text-violet-500"
+                  )}
+                  href="#home"
                 >
                   home
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-base font-bold uppercase text-gray-900 transition-all hover:text-violet-500"
-                  href="#"
+                  className={cn(
+                    "text-base font-bold uppercase transition-all",
+                    "text-gray-900 hover:text-violet-500"
+                  )}
+                  href="#invest"
                 >
                   about
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-base font-bold uppercase text-gray-900 transition-all hover:text-violet-500"
-                  href="#"
+                  className={cn(
+                    "text-base font-bold uppercase transition-all",
+                    "text-gray-900 hover:text-violet-500"
+                  )}
+                  href="#want"
                 >
                   faq&apos;s
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-base font-bold uppercase text-gray-900 transition-all hover:text-violet-500"
-                  href="#"
+                  className={cn(
+                    "text-base font-bold uppercase transition-all",
+                    "text-gray-900 hover:text-violet-500"
+                  )}
+                  href="#contact"
                 >
                   contact us
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="basis-1/5">
-            <ul className="inline-flex list-none gap-5">
+          <div className={cn("basis-full sm:basis-1/5", "text-center")}>
+            <ul className={cn("inline-flex list-none gap-5")}>
               <li>
                 <Link
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-violet-500 transition-all hover:bg-gray-900"
+                  className={cn(
+                    "rounded-full",
+                    "bg-violet-500 hover:bg-gray-900",
+                    "transition-all",
+                    "flex items-center justify-center",
+                    "h-12 w-12"
+                  )}
                   href="#"
                 >
                   <svg
@@ -77,7 +111,13 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-violet-500 transition-all hover:bg-gray-900"
+                  className={cn(
+                    "rounded-full",
+                    "bg-violet-500 hover:bg-gray-900",
+                    "transition-all",
+                    "flex items-center justify-center",
+                    "h-12 w-12"
+                  )}
                   href="#"
                 >
                   <svg
@@ -96,7 +136,13 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-violet-500 transition-all hover:bg-gray-900"
+                  className={cn(
+                    "rounded-full",
+                    "bg-violet-500 hover:bg-gray-900",
+                    "transition-all",
+                    "flex items-center justify-center",
+                    "h-12 w-12"
+                  )}
                   href="#"
                 >
                   <svg
@@ -118,17 +164,34 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="flex items-center justify-between py-7">
-          <div className="w-fit">
-            <p className="m-0 text-base font-light uppercase text-gray-900">
+        <div
+          className={cn(
+            "flex items-center justify-between",
+            "py-7",
+            "flex-wrap md:flex-nowrap"
+          )}
+        >
+          <div className={cn("w-fit", "mx-auto md:mx-0")}>
+            <p
+              className={cn(
+                "mb-5 md:mb-0",
+                "text-base",
+                "font-light uppercase text-gray-900",
+                "text-center md:text-left"
+              )}
+            >
               © 2022 Exceed Ltd. All rights reserved.
             </p>
           </div>
-          <div className="w-fit">
-            <ul className="inline-flex list-none gap-5">
+          <div className={cn("w-fit", "mx-auto md:mx-0")}>
+            <ul className={cn("inline-flex list-none gap-5")}>
               <li>
                 <Link
-                  className="m-0 text-base font-light uppercase text-gray-900 transition-all hover:text-violet-500"
+                  className={cn(
+                    "text-base font-light uppercase",
+                    "text-gray-900 hover:text-violet-500",
+                    "m-0 transition-all"
+                  )}
                   href="#"
                 >
                   Privacy Policy
@@ -136,7 +199,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  className="m-0 text-base font-light uppercase text-gray-900 transition-all hover:text-violet-500"
+                  className={cn(
+                    "text-base font-light uppercase",
+                    "text-gray-900 hover:text-violet-500",
+                    "m-0 transition-all"
+                  )}
                   href="#"
                 >
                   Terms of Use
@@ -145,15 +212,27 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mx-auto w-11/12 py-8">
-          <p className="mb-5 text-center text-sm capitalize -tracking-tight text-neutral-600">
+        <div className={cn("mx-auto", "py-4 sm:py-8", "w-full sm:w-11/12")}>
+          <p
+            className={cn(
+              "mb-5",
+              "text-base sm:text-sm",
+              "text-center capitalize -tracking-tight text-neutral-600"
+            )}
+          >
             Exceed does not give investment advice, endorsement, analysis or
             recommendations with respect to any securities and/or offerings. The
             content of this site should not be construed as financial advice nor
             as an offer or solicitation to any person in any jurisdiction to
             purchase or subscribe for any investment or security.
           </p>
-          <p className="mb-5 text-center text-sm capitalize -tracking-tight text-neutral-600">
+          <p
+            className={cn(
+              "mb-5",
+              "text-base sm:text-sm",
+              "text-center capitalize -tracking-tight text-neutral-600"
+            )}
+          >
             Offers are made exclusively through Exceed&apos;s official offering
             documents and solely to eligible investors in jurisdictions where
             such offer, distribution, publication, availability or use would be
@@ -164,13 +243,19 @@ export default function Footer() {
             adequacy, accuracy or completeness of that information or the use of
             it.
           </p>
-          <p className="mb-5 text-center text-sm capitalize -tracking-tight text-neutral-600">
+          <p
+            className={cn(
+              "mb-5",
+              "text-base sm:text-sm",
+              "text-center capitalize -tracking-tight text-neutral-600"
+            )}
+          >
             Any decision to invest should be made only on the basis of the
             relevant documentation for each investment and the risks detailed
             therein.
           </p>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }
