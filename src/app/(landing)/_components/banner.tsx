@@ -1,57 +1,127 @@
 import React from "react"
 import Image from "next/image"
 
+import { cn } from "@/lib/utils"
+
 export default function HomeBanner() {
   return (
-    <section className="w-full py-10 lg:py-20">
-      <div className="container mx-auto">
-        <h1 className="text-center font-black uppercase leading-[100%] tracking-[25.68px] text-violet-500 sm:text-8xl md:text-[140px] lg:text-[200px] xl:text-[225px] 2xl:text-[300px]">
+    <section
+      className={cn(
+        "relative w-full",
+        "px-3 pb-20 pt-10 sm:px-0 md:pb-36 md:pt-20",
+        "bg-hero bg-contain bg-bottom bg-no-repeat"
+      )}
+    >
+      <div
+        className={cn(
+          "relative",
+          "flex items-baseline justify-center lg:justify-end"
+        )}
+      >
+        <Image
+          width={49}
+          height={31}
+          alt=""
+          src="/assets/images/m-icon.png"
+          className={cn(
+            "absolute",
+            "top-10 md:top-0",
+            "sm:right-20 md:right-28 xl:right-44 2xl:right-64",
+            "sm:h-5 sm:w-5 md:h-auto md:w-auto",
+            "hidden sm:block"
+          )}
+        />
+        <h1
+          className={cn(
+            "relative",
+            "font-black uppercase leading-none text-violet-500",
+            "text-7xl sm:text-[150px] md:text-[180px] lg:text-[230px] xl:text-[300px] 2xl:text-[400px]",
+            "before:bg-title before:bg-contain before:bg-no-repeat",
+            "before:-left-8 before:bottom-8 sm:before:absolute lg:before:-left-20",
+            "before:h-8 before:w-8 lg:before:h-16",
+            "after:bg-music after:bg-contain after:bg-no-repeat",
+            "after:bottom-[120px] after:left-[410px] sm:after:absolute",
+            "after:h-8 2xl:after:w-8",
+            "px-5 sm:px-0",
+            "mb-5 sm:mb-0"
+          )}
+        >
           EXCEED
         </h1>
-        <div className="relative z-10 flex w-full flex-wrap items-center justify-between">
-          <div className="w-1/2 2xl:w-2/6">
-            <h3 className="mb-2 text-left text-xl font-black uppercase text-gray-900 lg:text-3xl 2xl:w-11/12">
+      </div>
+
+      <div
+        className={cn(
+          "container",
+          "lg:pl-20",
+          "mx-auto md:-mt-24 lg:-mt-28 xl:-mt-28 2xl:-mt-56"
+        )}
+      >
+        <div
+          className={cn(
+            "relative z-10 w-full",
+            "flex flex-wrap items-center justify-between md:flex-nowrap"
+          )}
+        >
+          <div className={cn("w-full md:w-2/5 2xl:w-1/3")}>
+            <h3
+              className={cn(
+                "font-black uppercase text-gray-900",
+                "text-2xl md:text-xl xl:text-3xl",
+                "text-left",
+                "mb-2 md:mt-24 lg:mt-20 2xl:mt-0"
+              )}
+            >
               A Whole New Way to Invest in and Engage with Talent
             </h3>
-            <p className="text-base tracking-[-0.32px] text-neutral-600">
+            <p
+              className={cn(
+                "tracking-[-0.32px] text-neutral-600",
+                "text-base",
+                "w-full sm:w-3/5 lg:max-xl:w-4/5"
+              )}
+            >
               One platform to invest, earn, interact, influence, and celebrate
               Talent
             </p>
-            <div className="mt-5 flex">
+            <div className={cn("mt-5", "flex")}>
               <Image
                 width={166}
                 height={50}
                 alt=""
                 src="/assets/images/app-store.png"
-                className="relative mr-5"
+                className={cn("relative", "mr-1 sm:mr-5")}
               />
               <Image
                 width={166}
                 height={50}
                 alt=""
                 src="/assets/images/google-play.png"
-                className="relative"
+                className={cn("relative")}
               />
             </div>
           </div>
-          <div className="w-1/2 2xl:w-1/2">
+          <div
+            className={cn(
+              "relative",
+              "w-full md:w-3/5 2xl:w-4/6",
+              "mt-10 md:mt-0"
+            )}
+          >
             <Image
-              width={970}
-              height={714}
+              width={833}
+              height={654}
               alt=""
               src="/assets/images/banner-img.png"
-              className="relative mt-[-100px] h-auto w-full xl:mt-[-150px] 2xl:ml-5 2xl:mt-[-180px]"
+              className={cn(
+                "relative z-10",
+                "ml-auto mr-auto md:-mr-10",
+                "h-auto w-auto"
+              )}
             />
           </div>
         </div>
       </div>
-      <Image
-        width={1920}
-        height={620}
-        alt=""
-        src="/assets/images/banner.png"
-        className="mt-[-200px] h-auto w-full object-cover lg:mt-[-250px] xl:mt-[-300px] 2xl:mt-[-500px]"
-      />
     </section>
   )
 }

@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background bg-gray-200 text-foreground;
+    @apply bg-[#EFECE9] bg-background text-foreground;
   }
 
   .text-shadow-custom {

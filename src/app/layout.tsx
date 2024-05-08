@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import localFont from "next/font/local"
 
 import "./globals.css"
 
@@ -7,7 +7,23 @@ import { cn } from "@/lib/utils"
 
 import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"] })
+const gtAmerica = localFont({
+  src: [
+    {
+      path: "../../public/fonts/GT America Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/GT America Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  weight: "400",
+  variable: "--font-gtAmerica",
+})
 
 export const metadata: Metadata = {
   title: "exceed starter template",
@@ -21,7 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className, "min-h-screen")}>
+      <body
+        className={cn(gtAmerica.className, gtAmerica.variable, "min-h-screen")}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
