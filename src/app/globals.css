@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 30 16% 93%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#EFECE9] bg-background text-foreground;
+    @apply bg-background text-foreground;
   }
 
   .text-shadow-custom {
@@ -80,9 +80,9 @@
       -2px 0 #120924,
       0 2px #120924,
       0 -2px #120924,
-      1px 1px #120924,
-      -1px -1px #120924,
-      1px -1px #120924,
-      -1px 1px #120924;
+      2px 2px #120924,
+      -2px -2px #120924,
+      2px -2px #120924,
+      -2px 2px #120924;
   }
 }
