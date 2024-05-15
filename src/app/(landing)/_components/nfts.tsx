@@ -29,14 +29,7 @@ export default function Nfts() {
         >
           NFTs for Artists Launching Soon
         </h2>
-        <div
-          className={cn(
-            "flex justify-center",
-            "mx-auto",
-            "relative",
-            "flex-wrap sm:flex-nowrap"
-          )}
-        >
+        <div className={cn("flex justify-center", "mx-auto", "relative")}>
           <Image
             width={19}
             height={20}
@@ -49,10 +42,11 @@ export default function Nfts() {
               key={index}
               className={cn(
                 "relative z-20 overflow-hidden rounded-3xl",
-                "first-of-type:mt-12 sm:first-of-type:-mr-10 sm:first-of-type:-rotate-[20deg]",
-                "last-of-type:z-10 sm:last-of-type:-ml-10 sm:last-of-type:mt-12 sm:last-of-type:rotate-[20deg]",
+                "first-of-type:-mr-10 first-of-type:mt-12 first-of-type:-rotate-[20deg]",
+                "last-of-type:z-10 last-of-type:-ml-10 last-of-type:mt-12 last-of-type:rotate-[20deg]",
                 "my-5 sm:my-0",
-                "h-auto w-full sm:h-60 sm:w-80 lg:h-96"
+                "h-60 lg:h-96 ",
+                "w-48 lg:w-80"
               )}
             >
               <Image
