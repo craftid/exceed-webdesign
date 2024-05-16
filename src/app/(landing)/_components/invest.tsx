@@ -1,7 +1,11 @@
-import React from "react"
+"use client"
+
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
+
+const MotionImage = motion(Image)
 
 const invest = [
   {
@@ -37,7 +41,11 @@ export default function Invest() {
             "mb-10 lg:mb-5"
           )}
         >
-          <h2
+          <motion.h2
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             className={cn(
               "mb-5",
               "text-[22px] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl",
@@ -45,8 +53,12 @@ export default function Invest() {
             )}
           >
             Invest with Passion in Talent You Believe in
-          </h2>
-          <p
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className={cn(
               "text-center tracking-[-0.32px] text-neutral-600 ",
               "mx-auto lg:w-3/4",
@@ -57,7 +69,7 @@ export default function Invest() {
             in. Whether it&apos;s your favorite musician, a soccer player you
             admire, or a creator soon to make it big - Exceed lets you discover,
             invest, and engage with your favorite Talent.
-          </p>
+          </motion.p>
         </div>
         <div
           className={cn(
@@ -75,7 +87,11 @@ export default function Invest() {
                 "before:bg-[#D9D9D9] before:content-['']"
               )}
             >
-              <Image
+              <MotionImage
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 width={326}
                 height={813}
                 alt=""
@@ -90,7 +106,11 @@ export default function Invest() {
           </div>
           <div className={cn("w-full md:w-3/4 2xl:w-3/5", "mt-5 md:mt-0")}>
             {invest.map((data, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
                 key={index}
                 className={cn(
                   "flex items-center",
@@ -129,7 +149,7 @@ export default function Invest() {
                     {data.desc}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

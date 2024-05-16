@@ -1,7 +1,11 @@
-import React from "react"
+"use client"
+
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
+
+const MotionImage = motion(Image)
 
 export default function HomeBanner() {
   return (
@@ -9,7 +13,7 @@ export default function HomeBanner() {
       className={cn(
         "relative w-full",
         "px-3 pb-20 pt-10 sm:px-0 md:pb-36 md:pt-20",
-        "bg-hero bg-contain bg-bottom bg-no-repeat"
+        "min-h-screen bg-hero bg-contain bg-bottom bg-no-repeat"
       )}
       id="home"
     >
@@ -32,7 +36,11 @@ export default function HomeBanner() {
             "hidden sm:block"
           )}
         />
-        <h1
+        <motion.h1
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           className={cn(
             "relative",
             "font-black uppercase leading-none text-violet-500",
@@ -48,7 +56,7 @@ export default function HomeBanner() {
           )}
         >
           EXCEED
-        </h1>
+        </motion.h1>
       </div>
 
       <div
@@ -65,7 +73,11 @@ export default function HomeBanner() {
           )}
         >
           <div className={cn("w-full md:w-2/5 2xl:w-1/3")}>
-            <h3
+            <motion.h3
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
               className={cn(
                 "font-black uppercase text-gray-900",
                 "text-2xl md:text-xl xl:text-3xl",
@@ -74,8 +86,12 @@ export default function HomeBanner() {
               )}
             >
               A Whole New Way to Invest in and Engage with Talent
-            </h3>
-            <p
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.8 }}
+              viewport={{ once: true }}
               className={cn(
                 "tracking-[-0.32px] text-neutral-600",
                 "text-base",
@@ -84,23 +100,29 @@ export default function HomeBanner() {
             >
               One platform to invest, earn, interact, influence, and celebrate
               Talent
-            </p>
-            <div className={cn("mt-5", "flex flex-wrap gap-2")}>
-              <Image
+            </motion.p>
+            <motion.div
+              className={cn("mt-5", "flex flex-wrap gap-2")}
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 1.2 }}
+              viewport={{ once: true }}
+            >
+              <MotionImage
                 width={166}
                 height={50}
                 alt=""
                 src="/assets/images/app-store.png"
                 className={cn("relative", "mr-1 sm:mr-5")}
               />
-              <Image
+              <MotionImage
                 width={166}
                 height={50}
                 alt=""
                 src="/assets/images/google-play.png"
                 className={cn("relative")}
               />
-            </div>
+            </motion.div>
           </div>
           <div
             className={cn(
@@ -109,7 +131,11 @@ export default function HomeBanner() {
               "mt-10 md:mt-0"
             )}
           >
-            <Image
+            <MotionImage
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
               width={833}
               height={654}
               alt=""
@@ -117,7 +143,7 @@ export default function HomeBanner() {
               className={cn(
                 "relative z-10",
                 "ml-auto mr-auto md:-mr-10",
-                "h-auto w-auto"
+                "w-auto"
               )}
             />
           </div>

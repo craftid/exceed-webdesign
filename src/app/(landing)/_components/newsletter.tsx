@@ -1,4 +1,6 @@
-import React from "react"
+"use client"
+
+import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
@@ -23,7 +25,11 @@ export default function Newsletter() {
           "p-5 sm:p-10 lg:p-40"
         )}
       >
-        <h2
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           className={cn(
             "font-black uppercase text-white",
             "text-[22px] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl",
@@ -31,8 +37,12 @@ export default function Newsletter() {
           )}
         >
           Sign up for Early Access
-        </h2>
-        <div
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className={cn(
             "relative mx-auto",
             "w-full sm:w-4/5 lg:w-3/5",
@@ -61,7 +71,7 @@ export default function Newsletter() {
           >
             Submit
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

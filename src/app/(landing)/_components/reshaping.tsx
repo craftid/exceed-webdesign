@@ -1,8 +1,14 @@
-import React from "react"
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
+
+const MotionImage = motion(Image)
+
+const MotionLink = motion(Link)
 
 export default function Reshaping() {
   return (
@@ -15,7 +21,11 @@ export default function Reshaping() {
           )}
         >
           <div className={cn("w-full sm:w-4/6")}>
-            <h2
+            <motion.h2
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
               className={cn(
                 "mb-5",
                 "font-black uppercase text-gray-900 ",
@@ -24,8 +34,12 @@ export default function Reshaping() {
               )}
             >
               Reshaping the Dynamics Between Creators and Their True Fans
-            </h2>
-            <p
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className={cn(
                 "tracking-[-0.32px] text-neutral-600",
                 "w-full sm:w-4/5 2xl:w-3/5",
@@ -37,8 +51,12 @@ export default function Reshaping() {
               in their favorite Talent, become part of an exclusive community of
               investors and gain access to unique benefits, along with real
               financial gains driven by the Talent success.
-            </p>
-            <Link
+            </motion.p>
+            <MotionLink
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               href="#"
               className={cn(
                 "relative block w-fit ",
@@ -48,10 +66,14 @@ export default function Reshaping() {
               )}
             >
               Get Started
-            </Link>
+            </MotionLink>
           </div>
           <div className={cn("w-full sm:w-2/6", "relative", "mt-5 sm:mt-0")}>
-            <Image
+            <MotionImage
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               width={481}
               height={728}
               alt=""

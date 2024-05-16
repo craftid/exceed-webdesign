@@ -9,7 +9,7 @@ interface ScrollToProps extends ButtonProps {
 }
 
 const ScrollTo = React.forwardRef<HTMLButtonElement, ScrollToProps>(
-  ({ elementId, children, className, ...props }) => {
+  ({ elementId, children, className, ...props }, ref) => {
     const handleScrollTo = () => {
       const element = document.getElementById(elementId)
       if (element) {
@@ -21,7 +21,12 @@ const ScrollTo = React.forwardRef<HTMLButtonElement, ScrollToProps>(
     }
 
     return (
-      <Button {...props} onClick={handleScrollTo} className={className}>
+      <Button
+        ref={ref}
+        {...props}
+        onClick={handleScrollTo}
+        className={className}
+      >
         {children}
       </Button>
     )
