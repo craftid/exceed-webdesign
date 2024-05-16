@@ -1,8 +1,12 @@
-import React from "react"
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { motion, useInView } from "framer-motion"
 
 import { cn } from "@/lib/utils"
+
+const MotionLink = motion(Link)
 
 const artists = [
   {
@@ -20,7 +24,11 @@ export default function Nfts() {
   return (
     <section className={cn("relative w-full", "py-10 lg:py-20")}>
       <div className={cn("container mx-auto")}>
-        <h2
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           className={cn(
             "text-center font-black uppercase text-gray-900",
             "text-[22px] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl",
@@ -28,7 +36,7 @@ export default function Nfts() {
           )}
         >
           NFTs for Artists Launching Soon
-        </h2>
+        </motion.h2>
         <div className={cn("flex justify-center", "mx-auto", "relative")}>
           <Image
             width={19}
@@ -92,7 +100,11 @@ export default function Nfts() {
             )}
           />
         </div>
-        <Link
+        <MotionLink
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           href="#"
           className={cn(
             "relative mx-auto block w-fit",
@@ -103,7 +115,7 @@ export default function Nfts() {
           )}
         >
           Get Started
-        </Link>
+        </MotionLink>
       </div>
 
       <Image

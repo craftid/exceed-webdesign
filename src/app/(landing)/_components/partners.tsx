@@ -1,5 +1,7 @@
-import React from "react"
+"use client"
+
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
@@ -7,12 +9,18 @@ import { Carousel } from "@/components/ui/carousel"
 
 import { PartnerSlider } from "./partners-slider"
 
+const MotionImage = motion(Image)
+
 export default function Partners() {
   return (
     <section className={cn("w-full", "py-10 lg:py-20")}>
       <div className={cn("container mx-auto", "mb-5 sm:mb-0")}>
         <div className={cn("flex items-center justify-center", "text-center")}>
-          <h2
+          <motion.h2
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             className={cn(
               "font-black uppercase text-gray-900",
               "text-[22px] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl",
@@ -20,8 +28,12 @@ export default function Partners() {
             )}
           >
             our
-          </h2>
-          <Image
+          </motion.h2>
+          <MotionImage
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             width={448}
             height={448}
             alt=""
@@ -32,14 +44,18 @@ export default function Partners() {
               "hidden sm:block"
             )}
           />
-          <h2
+          <motion.h2
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             className={cn(
               "font-black uppercase text-gray-900",
               "text-[22px] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
             )}
           >
             partners
-          </h2>
+          </motion.h2>
         </div>
       </div>
       <Image

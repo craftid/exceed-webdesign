@@ -1,6 +1,11 @@
-import React from "react"
+"use client"
+
+import Image from "next/image"
+import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
+
+const MotionImage = motion(Image)
 
 const stats = [
   {
@@ -33,7 +38,11 @@ export default function Stats() {
           "py-20 lg:py-24"
         )}
       >
-        <h2
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           className={cn(
             "font-black uppercase text-white",
             "text-[22px] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl",
@@ -41,7 +50,7 @@ export default function Stats() {
           )}
         >
           We Take Pride in Our Numbers
-        </h2>
+        </motion.h2>
         <div
           className={cn(
             "flex items-center justify-between",
@@ -50,7 +59,11 @@ export default function Stats() {
           )}
         >
           {stats.map((data, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
               key={index}
               className={cn(
                 "last-of-type:border-r-0",
@@ -78,7 +91,7 @@ export default function Stats() {
               >
                 {data.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
