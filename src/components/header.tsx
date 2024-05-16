@@ -51,6 +51,7 @@ const Header = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
               alt="logo"
               width={158}
               height={58}
+              className="w-40"
             />
           </Link>
         </div>
@@ -64,7 +65,7 @@ const Header = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
               className={cn("first:*pl-0 last:*pr-0 divide-slate-300 *:px-4")}
             >
               {navItems.map(({ label, href, scrollTo }) => (
-                <NavigationMenuItem key={href}>
+                <NavigationMenuItem key={scrollTo}>
                   <Link href={href} legacyBehavior passHref>
                     <NavigationMenuLink asChild>
                       <ScrollTo
@@ -117,7 +118,7 @@ const Header = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
                   </Link>
                   <ul className={cn("first:*pt-0 last:*pb-0 grid *:py-2")}>
                     {navItems.map(({ label, href, scrollTo }) => (
-                      <li key={href}>
+                      <li key={scrollTo}>
                         <ScrollTo
                           elementId={label}
                           variant="link"

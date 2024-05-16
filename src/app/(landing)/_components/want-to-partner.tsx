@@ -39,7 +39,7 @@ export default function WantToPartner() {
               className={cn("h-auto w-full")}
             />
           </div>
-          <div className={cn("w-full sm:w-3/5")}>
+          <div className={cn("relative w-full sm:w-3/5")}>
             <motion.h2
               initial={{ opacity: 0, y: -100 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -71,16 +71,16 @@ export default function WantToPartner() {
               benefit from new income sources. We&apos;d love to hear from you.
             </motion.p>
             <MotionLink
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               href="#"
               className={cn(
-                "relative block w-fit ",
+                "relative block  w-fit",
                 "border-violet-500 bg-violet-500 px-12 py-5 text-base font-bold text-white transition-all duration-300 hover:bg-gray-900",
-                "after:absolute after:-z-10 after:h-14 after:w-full after:border after:border-gray-900 after:content-['']",
-                "after:-bottom-1 after:-right-1 after:transition-all after:duration-300 hover:after:bottom-0 hover:after:right-0"
+                "before:absolute before:-z-10 before:h-14 before:w-full before:border before:border-gray-900 before:content-['']",
+                "before:-bottom-1 before:-right-1 before:transition-all before:duration-300 hover:before:bottom-0 hover:before:right-0"
               )}
             >
               Get Started

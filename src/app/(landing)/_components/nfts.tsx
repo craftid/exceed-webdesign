@@ -1,8 +1,9 @@
 "use client"
 
+import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion, useInView } from "framer-motion"
+import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
@@ -21,6 +22,19 @@ const artists = [
 ]
 
 export default function Nfts() {
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start center", "center end"],
+  })
+  const rotate = useTransform(scrollYProgress, [0, 1], [20, 0])
+  const rotateNegative = useTransform(scrollYProgress, [0, 1], [-20, 0])
+  const marginTop = useTransform(scrollYProgress, [0, 1], [48, 24])
+
+  const styleRotate = useSpring(rotate)
+  const styleRotateNegative = useSpring(rotateNegative)
+  const styleMarginTop = useSpring(marginTop)
+
   return (
     <section className={cn("relative w-full", "py-10 lg:py-20")}>
       <div className={cn("container mx-auto")}>
@@ -37,7 +51,10 @@ export default function Nfts() {
         >
           NFTs for Artists Launching Soon
         </motion.h2>
-        <div className={cn("flex justify-center", "mx-auto", "relative")}>
+        <div
+          ref={ref}
+          className={cn("flex justify-center", "mx-auto", "relative")}
+        >
           <Image
             width={19}
             height={20}
@@ -46,7 +63,7 @@ export default function Nfts() {
             className={cn("absolute -top-10 right-72", "h-auto w-auto")}
           />
           {artists.map((data, index) => (
-            <div
+            <motion.div
               key={index}
               className={cn(
                 "relative z-20 overflow-hidden rounded-3xl",
@@ -56,6 +73,20 @@ export default function Nfts() {
                 "h-60 lg:h-96 ",
                 "w-48 lg:w-80"
               )}
+              style={{
+                rotate:
+                  index === 0
+                    ? styleRotateNegative
+                    : artists.length - 1 === index
+                      ? styleRotate
+                      : 0,
+                marginTop:
+                  index === 0
+                    ? styleMarginTop
+                    : artists.length - 1 === index
+                      ? styleMarginTop
+                      : 0,
+              }}
             >
               <Image
                 width={389}
@@ -86,7 +117,7 @@ export default function Nfts() {
                   />
                 </svg>
               </div>
-            </div>
+            </motion.div>
           ))}
           <Image
             width={31}

@@ -1,4 +1,3 @@
-import Footer from "../../components/footer"
 import HomeBanner from "./_components/banner"
 import Invest from "./_components/invest"
 import Newsletter from "./_components/newsletter"
@@ -10,7 +9,7 @@ import WantToPartner from "./_components/want-to-partner"
 
 export default function Home() {
   return (
-    <>
+    <main className="flex w-full flex-1 flex-col overflow-hidden">
       <HomeBanner />
       <Invest />
       <Reshaping />
@@ -19,7 +18,6 @@ export default function Home() {
       <WantToPartner />
       <Nfts />
       <Newsletter />
-      <Footer />
-    </>
+    </main>
   )
 }

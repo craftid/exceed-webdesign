@@ -1,7 +1,14 @@
 "use client"
 
+import { useEffect, useRef } from "react"
 import Image from "next/image"
-import { motion } from "framer-motion"
+import {
+  animate,
+  motion,
+  useInView,
+  useMotionValue,
+  useTransform,
+} from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
@@ -9,19 +16,20 @@ const MotionImage = motion(Image)
 
 const stats = [
   {
-    number: "130",
+    number: 130,
     desc: "Years of combined experience",
   },
   {
-    number: "$7M",
+    number: 7,
+    isNumberMillion: true,
     desc: "Out of $25M Goal Invested so far in Talent",
   },
   {
-    number: "8",
+    number: 8,
     desc: "Talents engaged (and just getting started)",
   },
   {
-    number: "9",
+    number: 9,
     desc: "Industry awards won by our Talents",
   },
 ]
@@ -80,7 +88,13 @@ export default function Stats() {
                   "mb-5"
                 )}
               >
-                {data.number}
+                {!data.isNumberMillion ? (
+                  <AnimatedCounter from={0} to={data.number} once />
+                ) : (
+                  <>
+                    $<AnimatedCounter from={0} to={data.number} once />M
+                  </>
+                )}
               </h3>
               <p
                 className={cn(
@@ -97,4 +111,30 @@ export default function Stats() {
       </div>
     </section>
   )
+}
+
+type CounterProps = {
+  from: number
+  to: number
+  once?: boolean
+}
+
+function AnimatedCounter({ from, to, once }: CounterProps) {
+  const count = useMotionValue(from)
+  const rounded = useTransform(count, (latest) => {
+    return Math.round(latest)
+  })
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
+  // while in view animate the count
+  useEffect(() => {
+    if (inView) {
+      animate(count, to, { duration: 2 })
+    } else if (!inView && !once) {
+      count.set(from)
+    }
+  }, [count, inView, to, from, once])
+
+  return <motion.span ref={ref}>{rounded}</motion.span>
 }

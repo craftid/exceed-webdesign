@@ -24,7 +24,7 @@ export default function Footer() {
                 width="200"
                 height="60"
                 src="/assets/images/logo.png"
-                className="mx-auto md:m-0"
+                className="mx-auto w-40 md:m-0"
               />
             </a>
           </div>

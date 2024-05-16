@@ -13,7 +13,7 @@ export default function HomeBanner() {
       className={cn(
         "relative w-full",
         "px-3 pb-20 pt-10 sm:px-0 md:pb-36 md:pt-20",
-        "bg-hero bg-contain bg-bottom bg-no-repeat"
+        "min-h-screen bg-hero bg-contain bg-bottom bg-no-repeat"
       )}
       id="home"
     >
@@ -76,7 +76,7 @@ export default function HomeBanner() {
             <motion.h3
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: true }}
               className={cn(
                 "font-black uppercase text-gray-900",
@@ -90,7 +90,7 @@ export default function HomeBanner() {
             <motion.p
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.7, delay: 0.8 }}
               viewport={{ once: true }}
               className={cn(
                 "tracking-[-0.32px] text-neutral-600",
@@ -101,12 +101,14 @@ export default function HomeBanner() {
               One platform to invest, earn, interact, influence, and celebrate
               Talent
             </motion.p>
-            <div className={cn("mt-5", "flex flex-wrap gap-2")}>
+            <motion.div
+              className={cn("mt-5", "flex flex-wrap gap-2")}
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 1.2 }}
+              viewport={{ once: true }}
+            >
               <MotionImage
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
                 width={166}
                 height={50}
                 alt=""
@@ -114,17 +116,13 @@ export default function HomeBanner() {
                 className={cn("relative", "mr-1 sm:mr-5")}
               />
               <MotionImage
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
                 width={166}
                 height={50}
                 alt=""
                 src="/assets/images/google-play.png"
                 className={cn("relative")}
               />
-            </div>
+            </motion.div>
           </div>
           <div
             className={cn(
@@ -145,7 +143,7 @@ export default function HomeBanner() {
               className={cn(
                 "relative z-10",
                 "ml-auto mr-auto md:-mr-10",
-                "h-auto w-auto"
+                "w-auto"
               )}
             />
           </div>
