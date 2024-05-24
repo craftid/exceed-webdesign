@@ -45,15 +45,14 @@ const Header = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
         className="container mx-auto flex w-full items-center justify-between px-4 py-8"
       >
         <div className={cn("w-1/2 sm:w-3/12")}>
-          <Link href="#" ref={logoRef}>
-            <Image
-              src="/assets/images/logo.png"
-              alt="logo"
-              width={158}
-              height={58}
-              className="w-40"
-            />
-          </Link>
+          <Image
+            ref={logoRef}
+            src="/assets/images/logo.png"
+            alt="logo"
+            width={158}
+            height={58}
+            className="w-40"
+          />
         </div>
 
         <div className={cn("w-1/2 sm:w-3/4", "flex items-center justify-end")}>
